@@ -8,4 +8,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./data:/data
+    stdin_open: true
+    tty: true
 

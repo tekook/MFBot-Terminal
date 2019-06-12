@@ -17,6 +17,14 @@ docker run tekook/mfbot-terminal -v ./data:/data
 
 ./data must contain your Acc.ini and will contain all database and log files of the bot.
 
+Attach to the container to do stuff with the bot :-)
+
+ ```sh
+docker attach <container_name>
+```
+
+ (Leave attach via ```CTRL-P,CTRL-Q```)
+
 ### Deployment via Docker-Compose
 
 ```yml
@@ -27,4 +35,8 @@ services:
     image: tekook/mfbot-terminal
     volumes:
       - ./data:/data
+    stdin_open: true
+    tty: true
 ```
+
+Note: stdin_open & tty is neccesary via compose so the shell is interactive.

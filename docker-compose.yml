@@ -1,0 +1,11 @@
+version: "3.5"
+
+services:
+  bot:
+    image: tekook/mfbot-terminal
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data
+

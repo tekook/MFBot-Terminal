@@ -4,8 +4,6 @@
 
 Dockerized Version for [MFBot-Terminal](https://www.mfbot.de)
 
-Image-Version is based on the MFBot Version (see <https://mfbot.de/downloads)>
-
 ## Usage
 
 Use the example docker-compose.yml to build the image yourself

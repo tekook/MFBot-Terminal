@@ -39,4 +39,4 @@ services:
     tty: true
 ```
 
-Note: stdin_open & tty is neccesary via compose so the shell is interactive.
+Note : stdin_open & tty is neccesary via compose so the shell is interactive.

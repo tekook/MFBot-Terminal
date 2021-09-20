@@ -2,12 +2,23 @@ version: "3.5"
 
 services:
   bot:
-    image: tekook/mfbot-terminal
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ./data:/data
+    image: tekook/mfbot-terminal:latest
+    deploy:
+      resources:
+          limits:
+            cpus: '0.5'
+            memory: 2048M
+      restart_policy:
+        condition: any
     stdin_open: true
     tty: true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data:/data
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
 

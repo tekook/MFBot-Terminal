@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   bot:
-    image: tekook/mfbot-terminal:latest
+    image: c0mputern1k/mfbot-terminal:5.4.0.0
     deploy:
       resources:
           limits:

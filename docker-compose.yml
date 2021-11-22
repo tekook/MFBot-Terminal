@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   bot:
-    image: c0mputern1k/mfbot-terminal:5.4.0.0
+    image: c0mputern1k/mfbot-terminal:5.4.0.1
     deploy:
       resources:
           limits:

@@ -12,7 +12,7 @@ Comment the build array to use docker-hub.
 Run via docker run:
 
 ```sh
-docker run tekook/mfbot-terminal -v ./data:/data
+docker stack deploy --compose-file docker-compose.yml sfgames
 ```
 
 ./data must contain your Acc.ini and will contain all database and log files of the bot.
@@ -20,23 +20,8 @@ docker run tekook/mfbot-terminal -v ./data:/data
 Attach to the container to do stuff with the bot :-)
 
  ```sh
-docker attach <container_name>
+docker container ls | grep sfgames
+docker exec -ti <container_id> bash
 ```
 
  (Leave attach via ```CTRL-P,CTRL-Q```)
-
-### Deployment via Docker-Compose
-
-```yml
-version: "3.5"
-
-services:
-  bot:
-    image: tekook/mfbot-terminal
-    volumes:
-      - ./data:/data
-    stdin_open: true
-    tty: true
-```
-
-Note : stdin_open & tty is neccesary via compose so the shell is interactive.

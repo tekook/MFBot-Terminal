@@ -1,10 +1,10 @@
-FROM mono:6.12.0.107
+FROM mono:latest
 
-# define Bot Version so it gets Updated 
+# define Bot Version so it gets Updated
 ENV MFBOT_VERSION=5.4.0.1
 
 # install deps
-RUN apt-get update && apt-get install --no-install-recommends wget -y
+RUN apt-get update && apt-get install wget -y
 
 # download latest bot binary
 RUN mkdir /bot && wget -q -O /bot/MFBot https://www.mfbot.de/Download/latest/MFBot_Konsole_x86_64 && chmod +x /bot/MFBot

@@ -2,12 +2,12 @@ version: "3.5"
 
 services:
   bot:
-    image: c0mputern1k/mfbot-terminal:5.4.0.1
+    image: c0mputern1k/mfbot-terminal:5.4.1.0
     deploy:
       resources:
-          limits:
-            cpus: '0.5'
-            memory: 2048M
+        limits:
+          cpus: '0.5'
+          memory: 2048M
       restart_policy:
         condition: any
     stdin_open: true
@@ -21,4 +21,3 @@ services:
 networks:
   web:
     external: true
-

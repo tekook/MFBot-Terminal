@@ -4,6 +4,12 @@
 
 Dockerized Version for [MFBot-Terminal](https://www.mfbot.de)
 
+## Deployment
+
+```sh
+docker build -t c0mputern1k/mfbot-terminal:<version> .
+```
+
 ## Usage
 
 Use the example docker-compose.yml to build the image yourself

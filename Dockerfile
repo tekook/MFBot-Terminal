@@ -1,7 +1,7 @@
 FROM mono:6.12.0.182
 
 # define Bot Version so it gets Updated
-ENV MFBOT_VERSION=5.4.3.0
+ENV MFBOT_VERSION=5.6.2.0
 
 # install deps
 RUN apt-get update && apt-get install --no-install-recommends --yes wget referenceassemblies-pcl

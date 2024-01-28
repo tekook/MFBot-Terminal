@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install --no-install-recommends --yes wget referen
 RUN cat /etc/ssl/certs/* > /tmp/ca-bundle.crt && cert-sync /tmp/ca-bundle.crt
 
 # download latest bot binary
-RUN mkdir /bot && wget -q -O /bot/MFBot https://www.mfbot.de/Download/v5.6.2.0/MFBot_Konsole_x86_64 && chmod +x /bot>
+RUN mkdir /bot && wget -q -O /bot/MFBot https://download.mfbot.de/v5.6.2.0/MFBot_Konsole_x86_64 && chmod +x /bot/MFBot
 # run in /data
 WORKDIR /data
 
